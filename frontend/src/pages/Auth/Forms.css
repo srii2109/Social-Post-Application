@@ -1,0 +1,257 @@
+/* Forms.css - Premium Form Styles */
+
+.form-header {
+  margin-bottom: 28px;
+}
+
+.form-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.form-header p {
+  color: rgba(255,255,255,0.4);
+  font-size: 14px;
+  margin: 0;
+}
+
+.form-alert {
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.form-input .MuiOutlinedInput-root {
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  transition: all 0.3s ease;
+}
+
+.form-input .MuiOutlinedInput-root:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.form-input .MuiOutlinedInput-root.Mui-focused {
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 0 0 4px rgba(99,102,241,0.08);
+}
+
+.form-input .MuiOutlinedInput-root fieldset {
+  border-color: rgba(255,255,255,0.06);
+}
+
+.form-input .MuiOutlinedInput-root:hover fieldset {
+  border-color: rgba(255,255,255,0.12);
+}
+
+.form-input .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #6366f1;
+}
+
+.input-icon {
+  color: rgba(255,255,255,0.25);
+}
+
+.password-toggle {
+  color: rgba(255,255,255,0.25);
+}
+
+.password-toggle:hover {
+  color: rgba(255,255,255,0.5);
+}
+
+/* Password Strength */
+.password-strength {
+  margin-top: 8px;
+}
+
+.strength-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.strength-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.4);
+}
+
+.strength-percent {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.strength-bar {
+  height: 3px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.05);
+}
+
+.strength-bar .MuiLinearProgress-bar {
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+
+/* Form Options */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 24px 0;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #6366f1;
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: rgba(255,255,255,0.35);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+/* Submit Button */
+.submit-btn {
+  height: 52px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  border-radius: 14px !important;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.25) !important;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 30px rgba(99,102,241,0.35) !important;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  gap: 16px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.05);
+}
+
+.divider span {
+  color: rgba(255,255,255,0.2);
+  font-size: 12px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Social Button */
+.social-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.social-btn:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+
+.social-btn svg {
+  font-size: 22px;
+}
+
+/* Form Footer */
+.form-footer {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.form-footer p {
+  color: rgba(255,255,255,0.35);
+  font-size: 14px;
+}
+
+.switch-link {
+  color: #818cf8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.switch-link:hover {
+  color: #a5b4fc;
+}
+
+/* Check Icon */
+.check-icon {
+  color: #22c55e;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .form-header h2 {
+    font-size: 22px;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .submit-btn {
+    height: 48px !important;
+    font-size: 14px !important;
+  }
+}

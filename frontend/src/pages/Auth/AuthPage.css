@@ -1,0 +1,375 @@
+/* ===== CONTAINER ===== */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a0f;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* ===== MOUSE GLOW ===== */
+.mouse-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+/* ===== ANIMATED ORBS ===== */
+.bg-orbs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+}
+
+.orb1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(99, 102, 241, 0.2);
+  top: -150px;
+  right: -100px;
+}
+
+.orb2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(236, 72, 153, 0.15);
+  bottom: -100px;
+  left: -100px;
+}
+
+.orb3 {
+  width: 350px;
+  height: 350px;
+  background: rgba(16, 185, 129, 0.1);
+  top: 50%;
+  left: 70%;
+}
+
+.orb4 {
+  width: 300px;
+  height: 300px;
+  background: rgba(251, 191, 36, 0.08);
+  bottom: 30%;
+  left: 20%;
+}
+
+/* ===== GRID LINES ===== */
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* ===== PARTICLES ===== */
+.particles-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.1);
+}
+
+/* ===== AUTH WRAPPER ===== */
+.auth-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1300px;
+  width: 100%;
+  min-height: 90vh;
+  padding: 40px;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== LEFT SIDE - BRAND ===== */
+.brand-section {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.brand-content {
+  max-width: 520px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.logo-icon {
+  font-size: 36px;
+  color: #6366f1;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.brand-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientMove 4s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.brand-content p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 40px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 500;
+}
+
+/* Floating Cards */
+.floating-cards {
+  position: relative;
+  height: 80px;
+  display: flex;
+  gap: 16px;
+}
+
+.float-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.float-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.card1 {
+  bottom: 0;
+  left: 0;
+  animation-delay: 0s;
+}
+
+.card2 {
+  bottom: 20px;
+  left: 180px;
+  animation-delay: -2s;
+}
+
+.card3 {
+  bottom: 0;
+  left: 360px;
+  animation-delay: -4s;
+}
+
+.float-emoji {
+  font-size: 22px;
+}
+
+.float-card strong {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.float-card p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  margin: 0;
+}
+
+/* ===== RIGHT SIDE - FORM ===== */
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 48px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* Toggle */
+.toggle-container {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  margin-bottom: 32px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.toggle-btn.active {
+  background: rgba(99, 102, 241, 0.2);
+  color: white;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+}
+
+.toggle-btn:hover:not(.active) {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .auth-wrapper {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .brand-section {
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand-content {
+    max-width: 100%;
+  }
+
+  .brand-content h1 {
+    font-size: 36px;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .floating-cards {
+    display: none;
+  }
+
+  .form-container {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-content h1 {
+    font-size: 28px;
+  }
+
+  .brand-content p {
+    font-size: 15px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .form-container {
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+}
